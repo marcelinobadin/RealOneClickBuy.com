@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <title>AD box example</title>
+</head>
+<body>
+
+<script>
+    $($.ajax({
+        url: "http://localhost:3000/product/retrieve",
+        success: function( data ) {
+            $( "#buyAD" ).innerHTML(data);
+        }
+    }));
+</script>
+
+<div id="buyAD">
+
+</div>
+
+</body>
+</html>
