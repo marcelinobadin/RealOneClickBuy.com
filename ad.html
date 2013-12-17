@@ -6,18 +6,24 @@
 </head>
 <body>
 
-<script>
-    $($.ajax({
-        url: "http://localhost:3000/product/retrieve",
-        success: function( data ) {
-            $( "#buyAD" ).innerHTML(data);
-        }
-    }));
-</script>
-
 <div id="buyAD">
 
 </div>
+
+<script>
+    $(function() {
+        $.ajax({
+           url: "http://localhost:3000/product/retrieve",
+           type: "GET",
+           dataType: "html",
+           success: function(data) {
+               $("#buyAD").html(data);
+           }
+        });
+    });
+
+</script>
+
 
 </body>
 </html>
