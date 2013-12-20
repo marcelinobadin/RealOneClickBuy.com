@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Optional theme
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>Add Product</title>
 </head>
 <body>
-    <p>Add a new product</p>
-    <form method="post" action="http://localhost:3000/product/add" enctype="multipart/form-data">
-        <br/><label>Name :</label><input type="text" name="name"/>
-        <br/><label>URL :</label><input type="url" name="url"/>
-        <br/><label>Store :</label><input type="text" name="store"/>
-        <br/><label>Price :</label><input type="number" name="price"/>
-        <br/><label>Image :</label><input type="file" name="image"/>
-        <button type="submit">OK</button><button type="reset">Clear</button>
-    </form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3>Add a new product</h3>
+                </div>
+                <div class="panel-content">
+                    <form role="form" method="post" action="http://localhost:3000/product/add" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name :</label>
+                            <input class="form-control" place-holder="Type a name..." type="text" name="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="url">URL :</label><input class="form-control" place-holder="Type a URL..." type="url" name="url"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="store">Store :</label>
+                            <input class="form-control" place-holder="Type a store name..." type="text" name="store"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price :</label>
+                            <input class="form-control" place-holder="Type a price..." type="number" name="price"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image :</label>
+                            <input type="file" name="image"/>
+                        </div>
+                        <button class="btn btn-primary" type="submit">OK</button><button class="btn btn-danger" type="reset">Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
